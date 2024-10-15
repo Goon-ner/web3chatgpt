@@ -112,7 +112,7 @@ function App() {
         <div className='main'>
           {tg.initDataUnsafe.user.first_name?
             <h2 className='tgName'>
-          {/* {tg.initDataUnsafe.user.first_name}  */}
+          {tg.initDataUnsafe.user.first_name} 
           {tg.initDataUnsafe.user.last_name}
           </h2> :
           <h2>Username</h2>}
