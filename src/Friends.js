@@ -13,7 +13,7 @@ export default function Friends() {
         const querySnapshot = await getDocs(q);
         if (!querySnapshot.empty) {
           querySnapshot.forEach((doc) => {
-            console.log(doc['userId'])
+            console.log(doc)
             setFriends([...friends, {id: doc['userId'], name: doc['name']}])
           })
         } else {
@@ -26,7 +26,7 @@ export default function Friends() {
 
     return (
         <div className='friends'>
-            <h2>Friends</h2>
+            <h2 className='friends-head'>Friends</h2>
             <div className='reflink'>
                 <h3>Your referral link:</h3>
                 <p>{refLink}</p>
