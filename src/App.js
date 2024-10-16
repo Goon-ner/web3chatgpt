@@ -1,5 +1,4 @@
 import './App.css'
-import Spinner from 'react-bootstrap/Spinner';
 import HomeIcon from './icons/home.png'
 import FriendsIcon from './icons/friends.png'
 import TasksIcon from './icons/tasks.png'
