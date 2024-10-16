@@ -12,6 +12,7 @@ function App() {
 
   return (
       <div className="App">
+      <div className='space'></div>
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/friends" element={<Friends />}/>

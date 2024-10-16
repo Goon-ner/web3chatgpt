@@ -104,7 +104,6 @@ export default function Home() {
         </div>
         : 
         <div className='home'>
-        <div className='space'></div>
           {tg.initDataUnsafe.user.first_name?
             <h2 className='tgName'>
           {tg.initDataUnsafe.user.first_name} 

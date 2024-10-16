@@ -116,7 +116,7 @@ a {
 .icon {
   max-width: 40%;
 }
-.friens-head, .reflink, .friends-list {
+.friends-head, .reflink, .friends-list {
   border: rgb(255, 255, 255) solid 1px;
   background-color: rgb(0, 0, 0, 0.8);
   box-shadow:  0.1em 0.1em .2em rgb(255, 255, 255);
