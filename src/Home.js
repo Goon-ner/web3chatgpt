@@ -94,7 +94,7 @@ export default function Home() {
   }
 
   return (
-    <div>
+    <div className='home'>
         {isLoading? 
         <div className='App'>
             <div className='space'></div>
