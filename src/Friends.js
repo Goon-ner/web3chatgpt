@@ -13,8 +13,8 @@ export default function Friends() {
         const querySnapshot = await getDocs(q);
         if (!querySnapshot.empty) {
           querySnapshot.forEach((doc) => {
-            console.log(doc.data().name)
             setFriends([...friends, {id: doc.data().userId, name: doc.data().name}])
+            console.log(friends)
           })
         } else {
             return
@@ -22,7 +22,6 @@ export default function Friends() {
     }
     useEffect(() => {
         fetchFriends()
-        console.log(friends)
     }, [])
 
     return (
