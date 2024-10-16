@@ -12,15 +12,6 @@ import Tasks from './Tasks'
 function App() {
 
   return (
-    isLoading? 
-      <div className='App'>
-        <div className='space'></div>
-        <div className='loading'>
-          <h2>Web3 chatGPT</h2>
-          <Spinner animation="grow" />;
-        </div>
-      </div>
-      : 
       <div className="App">
       <Routes>
         <Route path="/" element={<Home />}/>

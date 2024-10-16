@@ -94,6 +94,15 @@ export default function Home() {
 
   return (
     <div>
+        {isLoading? 
+        <div className='App'>
+            <div className='space'></div>
+            <div className='loading'>
+            <h2>Web3 chatGPT</h2>
+            <Spinner animation="grow" />;
+            </div>
+        </div>
+        : 
         <div className='main'>
           {tg.initDataUnsafe.user.first_name?
             <h2 className='tgName'>
@@ -119,7 +128,9 @@ export default function Home() {
           </button>
           }
         </div>
+        }
         <div className='space'></div>
     </div>
+    
   )
 }
