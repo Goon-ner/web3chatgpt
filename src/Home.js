@@ -9,22 +9,22 @@ export default function Home() {
     const tg = window.Telegram.WebApp
  
 
-  const users = collection(db, 'chatgpt');
-  const [points, setPoints] = useState()
-  const [docId, setDocId] = useState()
-  const [started, setStarted] = useState(false)
-  const [timeStart, setTimeStart] = useState()
-  const [counter, setCounter] = useState();
-  const [isLoading, setIsLoading] = useState(true);
-  
-  const fetchPoints = async () => {
+    const users = collection(db, 'chatgpt');
+    const [points, setPoints] = useState()
+    const [docId, setDocId] = useState()
+    const [started, setStarted] = useState(false)
+    const [timeStart, setTimeStart] = useState()
+    const [counter, setCounter] = useState();
+    const [isLoading, setIsLoading] = useState(true);
+    
+    const fetchPoints = async () => {
     const q = query(users, where('userId', '==', tg.initDataUnsafe.user.id))
     const querySnapshot = await getDocs(q);
     if (!querySnapshot.empty) {
       querySnapshot.forEach((doc) => {
         setDocId(doc.id)
         // eslint-disable-next-line no-unused-expressions
-        setPoints(doc.data().points),
+        setPoints(doc.data().points)
         setTimeStart(doc.data().started)
         setCounter(14400000 - (new Date().getTime() - doc.data().started))
       })

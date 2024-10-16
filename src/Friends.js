@@ -1,7 +1,43 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 export default function Friends() {
-  return (
-    <div>Friends</div>
-  )
+    const tg = window.Telegram.WebApp
+    const users = collection(db, 'chatgpt')
+    const refLink = 'https://t.me/Web3chatGPT_bot?start=' + tg.initDataUnsafe.user.id
+    const [friends, setFriends] = ([])
+
+    const fetchFriends = async () => {
+        const q = query(users, where('referral', '==', (tg.initDataUnsafe.user.id).toString()))
+        const querySnapshot = await getDocs(q);
+        if (!querySnapshot.empty) {
+          querySnapshot.forEach((doc) => {
+            setFriends([...friends, {id: doc['userId'], name: doc['name']}])
+          })
+        } else {
+            return
+        }
+    }
+    useEffect(() => {
+        fetchFriends()
+    }, [])
+
+    return (
+        <div className='friends'>
+            <h2>Friends</h2>
+            <div className='reflink'>
+                <h3>Your refferal link:</h3>
+                <p>{refLink}</p>
+            </div>
+            <div className='friends-list'>
+                {friends.length ?
+                friends.map((friend) => 
+                <h3>{friend.name}</h3>) :
+                <div>You don't have any friends yet</div>
+                }
+
+
+            </div>
+
+        </div>
+    )
 }
