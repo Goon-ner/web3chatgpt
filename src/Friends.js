@@ -13,6 +13,7 @@ export default function Friends() {
         const querySnapshot = await getDocs(q);
         if (!querySnapshot.empty) {
           querySnapshot.forEach((doc) => {
+            console.log(doc.data().name)
             setFriends([...friends, {id: doc.data().userId, name: doc.data().name}])
           })
         } else {
