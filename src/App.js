@@ -4,9 +4,9 @@ import HomeIcon from './icons/home.png'
 import FriendsIcon from './icons/friends.png'
 import TasksIcon from './icons/tasks.png'
 import {NavLink, Routes, Route} from 'react-router-dom'
-import {Home} from './Home'
-import {Friends} from './Friends'
-import {Tasks} from './Tasks'
+import Home from './Home'
+import Friends from './Friends'
+import Tasks from './Tasks'
 
 
 function App() {
