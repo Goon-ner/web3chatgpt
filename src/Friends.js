@@ -14,6 +14,7 @@ export default function Friends() {
         if (!querySnapshot.empty) {
             // const [data, setData] = useState([])
             querySnapshot.map((doc) => {
+                console.log(querySnapshot)
                 setFriends([...friends, {id: doc.data().userId, name: doc.data().name}])
             })
             // setFriends(data)
@@ -27,7 +28,6 @@ export default function Friends() {
 
     return (
         <div className='friends'>
-            <h2 className='friends-head'>Friends</h2>
             <div className='reflink'>
                 <h3>Your referral link:</h3>
                 <p>{refLink}</p>
@@ -38,8 +38,6 @@ export default function Friends() {
                 <h3>{friend.name}</h3>) :
                 <div>You don't have any friends yet</div>
                 }
-
-
             </div>
 
         </div>
