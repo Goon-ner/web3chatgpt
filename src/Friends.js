@@ -12,10 +12,11 @@ export default function Friends() {
         const q = query(users, where('referral', '==', (tg.initDataUnsafe.user.id).toString()))
         const querySnapshot = await getDocs(q);
         if (!querySnapshot.empty) {
-          querySnapshot.forEach((doc) => {
-            setFriends([...friends, {id: doc.data().userId, name: doc.data().name}])
-            console.log(friends)
-          })
+            const data = []
+            querySnapshot.forEach((doc) => {
+                [...data, {id: doc.data().userId, name: doc.data().name}]
+            })
+            setFriends(data)
         } else {
             return
         }
