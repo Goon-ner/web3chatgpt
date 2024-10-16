@@ -78,7 +78,7 @@ export default function Friends() {
                 <h3>{friends.length} Friends:</h3>
                 {friends.map((friend) =>
                 <div className='friend'>
-                    <h3>{friend.name}</h3>
+                    <h3>{friend.fname}</h3>
                     {friend.refClaimed ?
                     <div className='claimed-ref'>Claimed</div> :
                     <div onClick={() => handleCatchRefPoints(friend.id)} className='claim-ref'>Claim 1000</div>
