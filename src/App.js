@@ -8,11 +8,9 @@ import FriendsIcon from './icons/friends.png'
 import TasksIcon from './icons/tasks.png'
 
 
-
-
-
 function App() {
   const tg = window.Telegram.WebApp
+ 
 
   const users = collection(db, 'chatgpt');
   const [points, setPoints] = useState()

@@ -1,10 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from 'firebase/firestore';
-// const dotenv = require('dotenv')
-// const dotenvExpand = require('dotenv-expand')
-import "dotenv/config"
 
-// dotenvExpand.expand(dotenv.config())
 
 
 
