@@ -22,6 +22,7 @@ export default function Friends() {
     }
     useEffect(() => {
         fetchFriends()
+        console.log(friends)
     }, [])
 
     return (
