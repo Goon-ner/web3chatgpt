@@ -94,8 +94,7 @@ export default function Home() {
   }
 
   return (
-    <div >
-        {isLoading? 
+        isLoading? 
         <div className='home'>
             <div className='space'></div>
             <div className='loading'>
@@ -105,6 +104,7 @@ export default function Home() {
         </div>
         : 
         <div className='home'>
+        <div className='space'></div>
           {tg.initDataUnsafe.user.first_name?
             <h2 className='tgName'>
           {tg.initDataUnsafe.user.first_name} 
@@ -129,9 +129,5 @@ export default function Home() {
           </button>
           }
         </div>
-        }
-        <div className='space'></div>
-    </div>
-    
   )
 }
