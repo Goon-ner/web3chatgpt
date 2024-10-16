@@ -94,9 +94,9 @@ export default function Home() {
   }
 
   return (
-    <div className='home'>
+    <div >
         {isLoading? 
-        <div className='App'>
+        <div className='home'>
             <div className='space'></div>
             <div className='loading'>
             <h2>Web3 chatGPT</h2>
@@ -104,7 +104,7 @@ export default function Home() {
             </div>
         </div>
         : 
-        <div className='main'>
+        <div className='home'>
           {tg.initDataUnsafe.user.first_name?
             <h2 className='tgName'>
           {tg.initDataUnsafe.user.first_name} 
