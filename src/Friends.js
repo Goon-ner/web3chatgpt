@@ -1,10 +1,12 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
+import { db } from './firebaseConfig';
+import { collection, getDocs, addDoc, doc, updateDoc, where, query} from 'firebase/firestore';
 
 export default function Friends() {
     const tg = window.Telegram.WebApp
     const users = collection(db, 'chatgpt')
     const refLink = 'https://t.me/Web3chatGPT_bot?start=' + tg.initDataUnsafe.user.id
-    const [friends, setFriends] = ([])
+    const [friends, setFriends] = useState([])
 
     const fetchFriends = async () => {
         const q = query(users, where('referral', '==', (tg.initDataUnsafe.user.id).toString()))
