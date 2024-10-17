@@ -52,7 +52,7 @@ export default function Friends() {
     const handleCatchRefPoints = async (refid) => {
         try {
             const update = doc(users, docId)
-            const data = {points: points+1000}
+            const data = {points: points+5000}
             const updateRef = doc(users, refid)
             const dataRef = {refClaimed: true}
             console.log(refid)
@@ -78,10 +78,10 @@ export default function Friends() {
                 <h3>{friends.length} Friends:</h3>
                 {friends.map((friend) =>
                 <div className='friend'>
-                    <h3>{friend.fname}</h3>
+                    <h3>{friend.name}</h3>
                     {friend.refClaimed ?
                     <div className='claimed-ref'>Claimed</div> :
-                    <div onClick={() => handleCatchRefPoints(friend.id)} className='claim-ref'>Claim 1000</div>
+                    <div onClick={() => handleCatchRefPoints(friend.id)} className='claim-ref'>Claim 5000</div>
                     }
                 </div>)}
             </div>:
