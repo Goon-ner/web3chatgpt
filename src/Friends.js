@@ -67,7 +67,8 @@ export default function Friends() {
     return (
         <div className='friends'>
             <div className='reflink'>
-                <div>For each friend you earn 5000 tokens</div>
+                <div>For each friend</div>
+                <div>you earn 5000 tokens</div>
                 <div>Your referral link:</div>
                 <div className='link'>
                     <div>{refLink.slice(8,28)}</div>

@@ -129,7 +129,6 @@ a {
   z-index: 1;
 }
 .reflink {
-  height: 20%;
   position: sticky;
   top: 5%;
   display: flex;
