@@ -67,7 +67,8 @@ export default function Friends() {
     return (
         <div className='friends'>
             <div className='reflink'>
-                <h3>Your referral link:</h3>
+                <div>For each friend you earn 5000 tokens</div>
+                <div>Your referral link:</div>
                 <div className='link'>
                     <div>{refLink.slice(8,28)}</div>
                     <div className='copyRefLink' onClick={() => copyRefLink(refLink)}>Copy</div>
